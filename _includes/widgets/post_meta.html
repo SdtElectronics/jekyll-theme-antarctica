@@ -1,0 +1,27 @@
+{%- if site.template.widgets contains "post_meta" -%}
+{% assign date_format = site.template.date_format | default: "%b %-d, %Y" %}
+
+<div class = "rightElem shadowTile">
+    <h1 class = "lstH1">Metadata</h1>
+
+    <div class = "rightRow">
+        <h2>Uploaded:</h2>
+        <span>{{ page.date | date: date_format }}</span>
+    </div>
+
+    <div class = "rightRow">
+        <h2>Last Modified:</h2>
+        <span>{{ page.modified | default: page.date | date: date_format }}</span>
+    </div>
+
+    <div class = "rightRow">
+        <h2>Tags:</h2>
+        <span class = "invSpan">{{ page.tags | size }}</span>
+        <div class = "rightRow tagCont">
+            {%- for tag in page.tags -%}
+            <a class = "hashTag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">{{tag}}</a>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{%- endif -%}

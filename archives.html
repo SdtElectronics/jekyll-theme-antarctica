@@ -1,0 +1,19 @@
+---
+layout: page
+widgets: 
+  - colophon
+  - share
+  - global_cmt
+---
+
+{%- if site.posts.size > 0 -%}
+
+  {% assign filter = '%Y' %}
+  {% include functions/get_datetimes.html %}
+  {% assign datetimes = return %}
+
+  {% assign keys = datetimes | reverse %}
+  {% assign field = 'date' %}
+  {% include list.html %}
+
+{%- endif -%}

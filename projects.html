@@ -1,0 +1,19 @@
+---
+layout: page
+widgets: 
+  - colophon
+  - share
+  - global_cmt
+---
+
+{%- if site.projects.size > 0 -%}
+
+  {%- include functions/get_projects.html -%}
+  {% assign categories = return %}
+
+  {% assign keys = categories %}
+  {% assign field = 'categories' %}
+  {% assign collection = site.projects %}
+  {%- include list.html -%}
+
+{%- endif -%}

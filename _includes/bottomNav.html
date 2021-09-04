@@ -1,0 +1,142 @@
+<nav id = "bottomNav">
+    <div class = "bottomGrp">
+        {%- assign funcBtn = layout.funcBtn | default: "toTop" -%}
+        {%- if funcBtn contains "toTop" -%}
+        <a class = "btn nf nf-fa-angle_double_up" href = "#midContTop">
+        </a>
+        {%- endif -%}
+        
+        {%- if funcBtn contains "goBack" -%}
+        <a class = "btn nf nf-mdi-undo_variant" href = "javascript:history.back()">
+        </a>
+        {%- endif -%}
+    </div>
+    
+    <form class = "bottomGrp">
+        <a class = "btn nf nf-mdi-home" href = "{{ '/home.html' | relative_url }}">
+        </a>
+
+        <input id = "bottomListBtn" type="radio" name="option" class = "bottomPopbtn btn"/>
+
+        <input id = "bottomRst" type="reset" class = "bottomRstbtn"/>
+
+        <ul class = "bottomPop noScrollbar">
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "{{ '/categories.html' | relative_url }}">
+                    <i class = "btn nf nf-mdi-format_list_bulleted"></i>
+                     Categories
+                </a>
+            </li>
+
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "{{ '/tags.html' | relative_url }}">
+                    <i class = "btn nf nf-mdi-tag_multiple"></i>
+                     Tags
+                </a>
+            </li>
+
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "{{ '/archives.html' | relative_url }}">
+                    <i class = "btn nf nf-mdi-history"></i>
+                     Archives
+                </a>
+            </li>
+            
+            {%- if site.template.portfolios contains "projects" -%}
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "{{ '/projects.html' | relative_url }}">
+                    <i class = "btn nf nf-mdi-hexagon_multiple"></i>
+                     Projects
+                </a>
+            </li>
+            {%- endif -%}
+
+            {%- if site.template.portfolios contains "gallery" -%}
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "{{ '/gallery.html' | relative_url }}">
+                    <i class = "btn nf nf-mdi-image_filter"></i>
+                     Gallery
+                </a>
+            </li>
+            {%- endif -%}
+        </ul>
+
+        <input id = "bottomMsgBtn" type="radio" name="option" class = "bottomPopbtn btn"/>
+
+        <input type="reset" class = "bottomRstbtn"/>
+
+        <div class = "bottomPop noScrollbar">
+            {%- if page.widgets -%}
+                {%- assign widgets = page.widgets -%}
+            {%- elsif site.defaults[page.layout].widgets -%}
+                {%- assign widgets = site.defaults[page.layout].widgets -%}
+            {%- elsif layout.widgets -%}
+                {%- assign widgets = layout.widgets -%}
+            {%- endif -%}
+
+            {%- for widget in widgets -%}
+                {%- if widget == "share" -%}
+                    {% continue %}
+                {%- endif -%}
+
+                {%- assign file = widget -%}
+                {%- assign array = file | split: '.' -%}
+                {%- if array.size == 1 -%}
+                    {%- assign file = file | append: '.html' -%}
+                {%- endif -%}
+
+                {%- assign file = 'widgets/' | append: file -%}
+
+                {%- include {{ file }} %}
+
+            {%- endfor -%}
+        </div>
+
+        <input id = "bottomShareBtn" type="radio" name="option" class = "bottomPopbtn btn"/>
+
+        <input type="reset" class = "bottomRstbtn"/>
+        {% include functions/get_share.html %}
+        <ul class = "bottomPop noScrollbar">
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "https://twitter.com/intent/tweet?text=">
+                    <i class = "btn nf nf-mdi-twitter"></i>
+                    Share on Twitter
+                </a>
+            </li>
+
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "https://twitter.com/intent/tweet?text=">
+                    <i class = "btn nf nf-mdi-facebook_box"></i>
+                    Share on Facebook
+                </a>
+            </li>
+
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "https://twitter.com/intent/tweet?text=">
+                    <i class = "btn nf nf-mdi-qqchat"></i>
+                    Share with QQ Friends
+                </a>
+            </li>
+
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "https://twitter.com/intent/tweet?text=">
+                    <i class = "btn nf nf-fa-weibo"></i>
+                    Share on Weibo
+                </a>
+            </li>
+
+            <li class = "bottomPopLi">
+                <a class = "bottomLabel barElemLabel" href = "https://twitter.com/intent/tweet?text=">
+                    <i class = "btn nf nf-fa-weixin"></i>
+                    Share with WeChat Friends
+                </a>
+            </li>
+        </ul>
+
+        <a class = "btn nf nf-mdi-information" href = "{{ '/about.html' | relative_url }}">
+        </a>
+
+        <label for = "bottomRst" class = "bottomPopBack">
+        </label>
+    </form>
+</nav>

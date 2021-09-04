@@ -1,0 +1,21 @@
+{%- if include.item -%}
+  {%- assign item = include.item -%}
+{%- endif -%}
+
+{%- assign post = item -%}
+
+{% assign date_format = site.template.date_format | default: "%b %-d, %Y" %}
+
+<div class = "mulRowElem">
+    <a class = "mulRowPrev" href="{{ post.url | relative_url }}" style = "background-image: url({{ post.eyeCatcher }});"></a>
+    <h1>{{ post.title | escape }}</h1>
+    <div class = "mulRowMeta">
+        <span class = "mulRowDate">{{ post.date | date: date_format }}</span>
+
+        <div class = "mulRowRight">
+            {%- for tag in post.tags -%}
+            <a class = "hashTag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">{{tag}}</a>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+{% assign surl = page.url | absolute_url %}
+{% assign stitle = page.title | default: site.title  %}
+{% assign description = "article from " | append: site.author | append: "'s blog" %}
+{% assign picture = page.eyeCatcher %}
+{% assign origin = site.url %}

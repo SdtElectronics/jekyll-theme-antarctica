@@ -1,0 +1,14 @@
+{%- if site.template.widgets contains "comment" -%}
+<div class = "rightElem shadowTile rightComt">
+    <h1 class = "lstH1">Comments</h1>
+    <div id = "vcomments" style = "padding: 0.6rem 0.8rem 1rem 0.8rem;"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '{{ site.valine.appId }}',
+            appKey: '{{ site.valine.appKey }}',
+            lang: 'en'
+        })
+    </script>
+</div>
+{%- endif -%}

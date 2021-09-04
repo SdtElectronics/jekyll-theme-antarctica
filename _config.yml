@@ -1,0 +1,103 @@
+# Theme Antarctica
+#
+# Stylish and feature-rich theme for Jekyll
+# 
+# Website: https://github.com/SdtElectronics/jekyll-theme-antarctica
+#
+# See the LICENCE file.
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you
+# use 'bundle exec jekyll serve'. If you change this file, please restart
+# the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Your awesome title
+email: your-email@domain.com
+author: GitHub User
+
+# Copyright setting
+# You can use any html code, currently below placeholders are available:
+# * current year: {currentYear}
+# * author: {author} (Value is the same as site.author)
+# * copyright: (c) - ©
+# * copyleft: (cleft)
+# * sound recording copyright: (p) - ℗ 
+#
+# For example:
+#   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
+#   "Copyright © 2017-2021 Foobar"
+#
+copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
+
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+favicon: "" # the favicon for your site
+#avatar: ""
+
+
+
+template:
+# date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+  date_format: "%b %d, %Y"
+  widgets: colophon comment global_cmt post_meta share
+  portfolios: projects gallery
+
+# Google analytics
+# google_analytics: [Tracking ID]
+
+# If you want to generate website sitemap, you can set true
+# sitemap: false
+
+# Valine Comments
+valine:
+  appId: ""
+  appKey: ""
+
+exclude: 
+  - ./.reff/
+  - ./.reff/_posts/
+
+collections_dir: collections
+collections:
+  projects:
+    output: true
+  gallery:
+    output: true
+  
+projects_categories: 
+  - Hardware
+  - Software
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      avatar: "assets/img/a-default.png"
+
+# Build settings
+# highlighter: none
+highlighter: rouge
+markdown: kramdown
+kmarkdown:
+  input: GFM
+
+plugins:
+#  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+#  - jekyll-paginate
+#  - jekyll-spaceship

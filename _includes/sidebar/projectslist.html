@@ -1,0 +1,7 @@
+{%- include functions/get_projects.html -%}
+{% assign categories = return %}
+
+{% assign keys = categories %}
+{% assign field = 'categories' %}
+{% assign url = '/projects.html' | relative_url %}
+{% include sidebar/sidelist.html %}

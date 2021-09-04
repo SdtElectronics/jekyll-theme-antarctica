@@ -1,0 +1,127 @@
+<nav id = "upperSidebar" class = "sidebarCont">
+    <ul id = "HighSidebarCont" class = "sidebarGrp shadowTile">
+        <li id = "home" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                {{ site.title | escape }}
+            </span>
+
+            <a class = "btn nf nf-mdi-home" href = "{{ '/home.html' | relative_url }}">
+            </a>
+        </li>
+    </ul>
+
+    <ul id = "MidSidebarCont" class = "sidebarGrp shadowTile">
+        <li id = "categories" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Categories
+            </span>                
+
+            <a class = "btn nf nf-mdi-format_list_bulleted"  href = "{{ '/categories.html' | relative_url }}">
+            </a>
+        </li>
+        
+        {% include sidebar/categorieslist.html %}
+
+        <li id = "tags" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Tags
+            </span>                      
+
+            <a class = "btn nf nf-mdi-tag_multiple" href = "{{ '/tags.html' | relative_url }}">
+            </a>              
+        </li>
+        
+        <div class = "sidebarList noScrollbar">
+            <div class = "tagCont rightRow">
+
+                {% for tag in site.tags %}
+                {% assign name = tag | first %}
+                    <a class = "hashTag" href="{{ '/tags.html' | relative_url }}#{{name}}">{{name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <li id = "history" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Archives
+            </span>                      
+
+            <a class = "btn nf nf-mdi-history" href = "{{ '/archives.html' | relative_url }}">
+            </a>              
+        </li>
+        
+        {% include sidebar/archiveslist.html %}
+
+        {%- if site.template.portfolios contains "projects" -%}
+        <li id = "projects" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Projects
+            </span>                      
+
+            <a class = "btn nf nf-mdi-hexagon_multiple" href = "{{ '/projects.html' | relative_url }}">
+            </a>              
+        </li>
+        
+        {% assign collection = site.projects %}
+        {% include sidebar/projectslist.html %}
+        {%- endif -%}
+
+        {%- if site.template.portfolios contains "gallery" -%}
+        <li id = "gallery" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Gallery
+            </span>                      
+
+            <a class = "btn nf nf-mdi-image_filter" href = "{{ '/gallery.html' | relative_url }}">
+            </a>              
+        </li>
+        {%- endif -%}
+    </ul>
+</nav>
+
+<nav id = "lowerSidebar" class = "sidebarCont">
+    <ul id = "toTopSidebarCont" class = "sidebarGrp shadowTile">
+        {%- assign funcBtn = layout.funcBtn | default: "toTop" -%}
+        {%- if funcBtn contains "toTop" -%}
+        <li id = "toTop" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Back to Top
+            </span>
+
+            <a class = "btn nf nf-fa-angle_double_up" href = "#midContTop">
+            </a>
+        </li>
+        {%- endif -%}
+        
+        {%- if funcBtn contains "goBack" -%}
+        <li id = "goBack" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Go Back
+            </span>
+
+            <a class = "btn nf nf-mdi-undo_variant" href = "javascript:history.back()">
+            </a>
+        </li>
+        {%- endif -%}
+    </ul>
+
+    <ul id = "LowerSidebarCont" class = "sidebarGrp shadowTile">
+        <li id = "star" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                Star This Blog
+            </span>
+
+            <a class = "btn nf nf-fa-star">
+            </a>
+        </li>
+
+        <li id = "about" class = "sidebarElem">
+            <span class = "sidebarLabel barElemLabel">
+                About
+            </span>
+
+            <a class = "btn nf nf-mdi-information" href = "{{ '/about.html' | relative_url }}">
+            </a>
+        </li>
+    </ul>
+</nav>

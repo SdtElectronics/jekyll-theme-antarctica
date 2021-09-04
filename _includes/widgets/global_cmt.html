@@ -1,0 +1,15 @@
+{%- if site.template.widgets contains "global_cmt" -%}
+<div class = "rightElem shadowTile rightComt">
+    <h1 class = "lstH1">Leave a Message</h1>
+    <div id = "vcomments" style = "padding: 0.6rem 0.8rem 1rem 0.8rem;"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '{{ site.valine.appId }}',
+            appKey: '{{ site.valine.appKey }}',
+            lang: 'en',
+            path: "home"
+        })
+    </script>
+</div>
+{%- endif -%}

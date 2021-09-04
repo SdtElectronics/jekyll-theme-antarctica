@@ -1,0 +1,45 @@
+---
+layout: post
+widgets: 
+  - colophon
+  - share
+  - global_cmt
+---
+<div style = "display: flex; flex-direction: column; min-height: 100%;">
+<div id = "aboutBanner">
+    <img class = "avatar" src = "{{ page.avatar }}"/>
+
+    <div id = "a-intro">
+        <h1>{{ page.heading }}</h1>
+
+        <span>{{ page.intro | default:site.description }}</span>
+
+        {%- for attr in page.attrs -%}
+        <div>
+            <span><i class = "nf {{ attr.icon }}"></i> {{ attr.first[0] }}: </span>
+            <span>{{ attr.first[1] }}</span>
+        </div>
+        {%- endfor -%}
+
+        <div id = "a-links">
+            <a class = "btn nf nf-mdi-twitter" href = "{{ page.twitterAddr }}">
+            </a>
+
+            <a class = "btn nf nf-mdi-facebook_box" href = "{{ page.facebook_boxAddr }}">
+            </a>
+
+            <a class = "btn nf nf-mdi-github_circle" href = "{{ page.githubAddr }}">
+            </a>
+
+            <a class = "btn nf nf-mdi-stack_overflow" href = "{{ page.stackOverflowAddr }}">
+            </a>
+
+            <a class = "btn nf nf-mdi-linkedin_box" href = "{{ page.linkedinAddr }}">
+            </a>
+        </div>
+    </div>
+</div>
+
+{{ content }}
+
+</div>

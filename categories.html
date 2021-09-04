@@ -1,0 +1,18 @@
+---
+layout: page
+widgets: 
+  - colophon
+  - share
+  - global_cmt
+---
+
+{%- if site.posts.size > 0 -%}
+
+  {%- include functions/get_categories.html -%}
+  {% assign categories = return %}
+
+  {% assign keys = categories %}
+  {% assign field = 'categories' %}
+  {%- include list.html -%}
+
+{%- endif -%}

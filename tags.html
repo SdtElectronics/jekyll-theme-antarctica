@@ -1,0 +1,18 @@
+---
+layout: page
+widgets: 
+  - colophon
+  - share
+  - global_cmt
+---
+
+{%- if site.posts.size > 0 -%}
+
+  {%- include functions/get_tags.html -%}
+  {% assign tags = return %}
+
+  {% assign keys = tags %}
+  {% assign field = 'tags' %}
+  {% include list.html %}
+
+{%- endif -%}

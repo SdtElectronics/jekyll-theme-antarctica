@@ -1,0 +1,20 @@
+---
+layout: scaffold
+widgets: 
+  - colophon
+  - share
+  - global_cmt
+---
+
+{% assign date_format = site.template.date_format | default: "%b %-d, %Y" %}
+
+<div id = "midGrid" class = "mid-content midMulRow mid-grid noScrollbar fixedCont">
+    <div id = "midContTop"></div>
+    
+    {%- for item in site.gallery -%}
+    <div class = "mulRowElem mid-grid-cell">
+        <a class = "gridPrev" href = "{{ item.url | relative_url }}" style = "background-image: url({{ item.src }});"></a>
+        <span class = "gridDate">{{ item.date | date: date_format }}</span>
+    </div>
+    {%- endfor -%}
+</div>

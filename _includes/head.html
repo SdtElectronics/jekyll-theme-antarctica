@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="shortcut icon" href="{{ site.favicon }}">
+    <link rel="stylesheet" href="{{ '/assets/css/nf.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href = "{{ '/assets/css/syntax.css' | relative_url }}" rel="stylesheet">
+
+    {%- if site.valine -%}
+        <script src = "https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+    {%- endif -%}
+</head>

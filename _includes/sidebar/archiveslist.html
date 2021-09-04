@@ -1,0 +1,8 @@
+{% assign filter = '%Y' %}
+{% include functions/get_datetimes.html %}
+{% assign datetimes = return %}
+
+{% assign keys = datetimes %}
+{% assign field = 'date' %}
+{% assign url = '/archives.html' | relative_url %}
+{% include sidebar/sidelist.html %}

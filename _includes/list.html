@@ -1,0 +1,28 @@
+{%- if include.keys -%}
+  {%- assign keys = include.keys -%}
+{%- endif -%}
+
+{%- if include.field -%}
+  {%- assign field = include.field -%}
+{%- endif -%}
+
+{% for key in keys %}
+<input type="checkbox" class = "mid-hori-tgl"/>
+
+<div class = "mid-hori-bar">
+    <span id = "{{ key }}" class = "barElemLabel">
+        {{ key }}
+    </span>
+
+    <span class = "invSpan">{{ collection | default: site.posts | where: field, key | size }}</span>
+</div>  
+
+<div class = "midMulRow">
+    {% assign items = collection | default: site.posts | where: field, key %}
+    {% for item in items %}
+        {% if item != nil %}
+            {% include postPrev.html %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}

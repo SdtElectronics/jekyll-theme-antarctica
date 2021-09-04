@@ -1,0 +1,18 @@
+---
+layout: scaffold
+widgets:
+  - colophon
+  - share
+  - global_cmt
+---
+
+<div id = "midComp" class = "midMulRow mid-content noScrollbar fixedCont">
+    <div id = "midContTop"></div>
+    {%- assign post = site.posts | concat: site.projects | sort: 'date' | reverse -%}
+    {%- assign posts = site.posts | concat: site.projects -%}
+    {%- for item in posts -%}
+        {% if item != nil %}
+            {% include postPrev.html %}
+        {% endif %}
+    {%- endfor -%}
+</div>

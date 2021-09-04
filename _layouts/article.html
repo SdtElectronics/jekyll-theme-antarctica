@@ -1,0 +1,16 @@
+---
+layout: post
+widgets:
+  - post_meta
+  - share
+  - comment
+---
+
+{%- if page.eyeCatcher -%}
+<img class = "eyeCatcher" src = "{{ page.eyeCatcher }}"/>
+{%- endif -%}
+
+<h1 class = "articleH1">{{ heading | default: page.title | escape }}</h1>
+<article class = "articleBody">
+    {% include anchor_headings.html html=content anchorBody="" %}
+</article>

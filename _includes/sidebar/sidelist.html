@@ -1,0 +1,16 @@
+{%- if include.keys -%}
+  {%- assign keys = include.keys -%}
+{%- endif -%}
+
+{%- if include.field -%}
+  {%- assign field = include.field -%}
+{%- endif -%}
+
+<ul class = "sidebarList noScrollbar">
+    {% for key in  keys %}
+    <li>
+        <a href = "{{ url }}#{{ key }}" class = "lstH1 sidebarlstH1">{{ key }}</a>
+        <span class = "invSpan">{{ collection | default: site.posts | where: field, key | size }}</span>
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,25 @@
+{%- if site.template.widgets contains "share" -%}
+<div class = "rightElem rightBtns shadowTile">
+    
+    {% include functions/get_share.html %}
+
+    {% assign twShareLink = "http://twitter.com/share?url=" | append: surl | append: "&text=" | append: stitle | append: "&via=" | append: origin | uri_escape %}
+
+    <a class = "twitter-share-button btn nf nf-mdi-twitter" target = "_blank" href = "{{ twShareLink }}">
+    </a>
+
+    <a class = "btn nf nf-mdi-facebook_box" target = "_blank" href = "https://www.facebook.com/sharer/sharer.php?u={{ surl }}">
+    </a>
+
+    {% assign qqShareLink = "http://connect.qq.com/widget/shareqq/iframe_index.html?url=" | append: surl | append: "&title=" | append: stitle | append: "&desc=" | append: description | append: "&pics=" | append: picture | append: "&site=" | append: origin | uri_escape %}
+
+    <a class = "btn nf nf-mdi-qqchat" target = "_blank" href = "{{ qqShareLink }}">
+    </a>
+
+    <a class = "btn nf nf-fa-weibo" target = "_blank">
+    </a>
+
+    <a class = "btn nf nf-fa-weixin" target = "_blank">
+    </a>
+</div>
+{%- endif -%}
