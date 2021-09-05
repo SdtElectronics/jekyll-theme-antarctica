@@ -90,6 +90,7 @@
 */
 
 html{
+    position: fixed;
     height: 100vh;
     width: 100vw;
 }
@@ -1111,7 +1112,7 @@ ul.bottomPop{
     .mid-content{
         width: calc(100vw - var(--tile-inter-margin));
         left: var(--tile-inter-margin);
-        height: calc(100vh - var(--body-inner-margin) * 3 - var(--sidebar-elem-size) * 1rem);
+        height: calc(100% - var(--body-inner-margin) * 3 - var(--sidebar-elem-size) * 1rem);
     }
 
     .mid-page{
