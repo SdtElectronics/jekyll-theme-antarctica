@@ -16,10 +16,12 @@
     <a class = "btn nf nf-mdi-qqchat" target = "_blank" href = "{{ qqShareLink }}">
     </a>
 
-    <a class = "btn nf nf-fa-weibo" target = "_blank">
+    {% assign wbShareLink = "http://service.weibo.com/share/share.php?type=3&count=1&url=" | append: surl | append: "&title=" | append: stitle | uri_escape %}
+
+    <a class = "btn nf nf-fa-weibo" target = "_blank" >
     </a>
 
-    <a class = "btn nf nf-fa-weixin" target = "_blank">
+    <a class = "btn nf nf-fa-weixin" target = "_blank" href = "{{ qqShareLink }}">
     </a>
 </div>
 {%- endif -%}

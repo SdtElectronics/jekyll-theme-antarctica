@@ -945,9 +945,8 @@ ul.bottomPop{
 
 .bottomPopbtn{
     margin: 0px;
-    /*margin: calc(var(--sidebar-elem-size) * -1rem) 0px 0px 0px;
-    height: 0px;*/
     appearance: none;
+    opacity: 0;
 }
 
 .bottomPopbtn::after{

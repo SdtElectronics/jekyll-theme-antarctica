@@ -21,7 +21,7 @@
 
 title: Your awesome title
 email: your-email@domain.com
-author: GitHub User
+author: SdtElectronics
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -55,16 +55,13 @@ template:
   widgets: colophon comment global_cmt post_meta share
   portfolios: projects gallery
 
-# Google analytics
-# google_analytics: [Tracking ID]
-
 # If you want to generate website sitemap, you can set true
 # sitemap: false
 
 # Valine Comments
 valine:
-  appId: ""
-  appKey: ""
+  appId: "GoHOdR14a6Qubobq68emQ8n2-MdYXbMMI"
+  appKey: "SCxcdTzApt8RXJVrtqsDXay0"
 
 exclude: 
   - ./.reff/
@@ -89,15 +86,11 @@ defaults:
       avatar: "assets/img/a-default.png"
 
 # Build settings
-# highlighter: none
 highlighter: rouge
 markdown: kramdown
 kmarkdown:
   input: GFM
 
 plugins:
-#  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-#  - jekyll-paginate
-#  - jekyll-spaceship
