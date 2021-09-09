@@ -396,6 +396,18 @@ ul{
     color: var(--foreground-emph);
 }
 
+.articleBody img{
+    width: 100%;
+}
+
+.articleBody ul, .articleBody ol {
+    margin-left: 30px;
+}
+
+.articleBody ul{
+    list-style-type: disc;
+}
+
 .hnk::before{
     color: var(--foreground-light);
     margin-left: 0.3rem;
@@ -878,15 +890,6 @@ table th, table td {
     flex-grow: 1;
 }
 
-.colophon{
-    padding-bottom: 0.3rem;
-}
-
-.colophon>.rightRow>*{
-    color: var(--foreground-light);
-    font-size: 0.9rem;
-}
-
 #bottomNav{
     display: none;
     position: fixed;
@@ -945,8 +948,8 @@ ul.bottomPop{
 
 .bottomPopbtn{
     margin: 0px;
-    appearance: none;
-    opacity: 0;
+    margin: calc(var(--sidebar-elem-size) * -1rem) 0px 0px 0px;
+    height: 0px;
 }
 
 .bottomPopbtn::after{

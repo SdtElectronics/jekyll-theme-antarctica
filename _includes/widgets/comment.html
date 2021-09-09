@@ -1,7 +1,7 @@
 {%- if site.template.widgets contains "comment" -%}
 <div class = "rightElem shadowTile rightComt">
     <h1 class = "lstH1">Comments</h1>
-    <div id = "vcomments" style = "padding: 0.6rem 0.8rem 1rem 0.8rem;"></div>
+    <div id = "vcomments"></div>
     <script>
         new Valine({
             el: '#vcomments',
@@ -11,4 +11,19 @@
         })
     </script>
 </div>
+
+<style>
+    #vcomments{
+        padding: 0.6rem 0.8rem 1rem 0.8rem;
+        overflow-y: auto;
+        max-height: calc(100% - 2.1rem);
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    }
+
+    #vcomments::-webkit-scrollbar{ /* WebKit */
+        width: 0;
+        height: 0;
+    }
+</style>
 {%- endif -%}

@@ -12,4 +12,19 @@
         })
     </script>
 </div>
+
+<style>
+    #vcomments{
+        padding: 0.6rem 0.8rem 1rem 0.8rem;
+        overflow-y: auto;
+        max-height: calc(100% - 2.1rem);
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    }
+
+    #vcomments::-webkit-scrollbar{ /* WebKit */
+        width: 0;
+        height: 0;
+    }
+</style>
 {%- endif -%}
