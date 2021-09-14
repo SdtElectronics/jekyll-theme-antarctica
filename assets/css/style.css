@@ -822,7 +822,7 @@ table th, table td {
 #rightCont{
     display: flex;
     flex-direction: column;
-    --body-right-margin: 5rem;
+    --body-right-margin: 4.8rem;
     right: calc(var(--sidebar-elem-size) * 1rem + var(--body-right-margin));
     height: calc(100vh - var(--body-inner-margin) * 2 + var(--tile-inter-margin));
     width: calc(var(--sidebar-full-size) * 1rem + var(--right-total-space) - var(--body-right-margin));
@@ -937,7 +937,8 @@ table th, table td {
     bottom: var(--bottom-margin);
     left: var(--body-inner-margin);
     width: calc(100vw - var(--body-inner-margin) * 2);
-    max-height: calc(100vh - var(--bottom-margin) - var(--body-inner-margin));
+    padding-top: var(--bottom-margin);
+    max-height: calc(100vh - var(--bottom-margin) * 2 - var(--body-inner-margin));
     overflow-y: auto;
     z-index: 2;
 }
@@ -1107,6 +1108,10 @@ ul.bottomPop{
         --body-inner-margin: var(--tile-inter-margin);
     }
 
+    ::-webkit-scrollbar{
+        width: 6px;
+    }
+
     .sidebarCont{
         display: none !important;
     }
@@ -1119,6 +1124,7 @@ ul.bottomPop{
 
     .mid-page{
         width: calc(100vw - var(--tile-inter-margin) * 2);
+        overflow: auto;
     }
 
     .mid-hori-bar,.mid-hori-tgl{
