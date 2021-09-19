@@ -144,12 +144,10 @@ ul{
     white-space: nowrap;
     direction: ltr;
 
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
 
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
 
     /* Support for IE. */
@@ -216,6 +214,10 @@ ul{
     border-radius: 0.15em;
     white-space: nowrap;
     cursor: pointer;
+}
+
+.hashTag:hover{
+    background-color: var(--foreground-dark);
 }
 
 .hashTag::after{
@@ -352,7 +354,7 @@ ul{
     width: calc(100vw - var(--sidebar-hori-span) * 2rem - var(--right-total-space) - 2 * var(--tile-inter-margin));
     animation: var(--transition-speed) ease-out 0s 1 toFront;
     scroll-behavior: smooth;
-    filter: drop-shadow(0px 0px 3.9px #aaa);
+    filter: drop-shadow(0px 0px 3px #777);
     overflow-y: auto;
 }
 
@@ -382,7 +384,7 @@ ul{
 }
 
 .articleBody img{
-    width: 100%;
+    max-width: 100%;
 }
 
 .articleBody ul{
@@ -635,6 +637,7 @@ table th, table td {
     position: relative;
     height: 12.9rem;
     max-width: calc(100% - var(--tile-inter-margin));
+    min-width: 32%;
     flex-grow: 1;
     scroll-snap-align: start;
     background-color: var(--tile-bkgr-color);

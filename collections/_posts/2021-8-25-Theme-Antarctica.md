@@ -7,7 +7,7 @@ eyeCatcher: https://refstatic.sk/article/od-antarktidy-sa-odtrhol-jeden-z-najvac
 ---
 
 ---
-![hqCsB9.png](https://z3.ax1x.com/2021/09/09/hqCsB9.png)
+![48U4iQ.png](https://z3.ax1x.com/2021/09/19/48U4iQ.png)
 
 
 The goal of Antarctica is evolving to an elegant and feature-rich theme across platforms.

@@ -1,29 +1,56 @@
-{%- if site.template.widgets contains "comment" -%}
+{%- if site.template.widgets contains "global_cmt" -%}
 <div class = "rightElem shadowTile rightComt">
-    <h1 class = "lstH1">Comments</h1>
-    <div id = "vcomments"></div>
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: '{{ site.valine.appId }}',
-            appKey: '{{ site.valine.appKey }}',
-            lang: 'en'
-        })
-    </script>
+    <h1 class = "lstH1">Leave a Message</h1>
+    <iframe onload = "this.height=this.contentWindow.document.body.scrollHeight;" srcdoc = '
+        <script src = "https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+        <div id = "vcomments" class = "vcc"></div>
+        <script>
+            new Valine({
+                el: "#vcomments",
+                appId: "{{ site.valine.appId }}",
+                appKey: "{{ site.valine.appKey }}",
+                lang: "en",
+                path: "home"
+            });
+        </script>
+
+    <style>
+        .vcc{
+            padding: 0.6rem 0.8rem 1rem 0.8rem;
+            overflow-y: auto;
+            max-height: calc(100% - 2.1rem);
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+
+        .vcc::-webkit-scrollbar{ /* WebKit */
+            width: 0;
+            height: 0;
+        }
+
+        .v[data-class=v] .veditor {
+            min-height: 1em;
+        }
+
+        .v[data-class=v] .vwrap .vheader .vinput {
+            width: 100%;
+        }
+
+        .v[data-class=v] .vwrap .vheader .vinput:focus {
+            border-bottom-color:  #7a5a88;
+        }
+
+        .v[data-class=v] .vsys {
+            display: none;
+        }
+    </style>
+    '></iframe>
+
+    <style>
+        iframe{
+            border: 0px;
+            
+        }
+    </style>
 </div>
-
-<style>
-    #vcomments{
-        padding: 0.6rem 0.8rem 1rem 0.8rem;
-        overflow-y: auto;
-        max-height: calc(100% - 2.1rem);
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    }
-
-    #vcomments::-webkit-scrollbar{ /* WebKit */
-        width: 0;
-        height: 0;
-    }
-</style>
 {%- endif -%}
