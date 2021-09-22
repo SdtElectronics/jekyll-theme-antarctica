@@ -7,26 +7,6 @@ layout: default
 {{ content }}
 
 <div id = "rightCont" class = "fixedCont">
-    {%- if page.widgets -%}
-        {%- assign widgets = page.widgets -%}
-    {%- elsif site.defaults[page.layout].widgets -%}
-        {%- assign widgets = site.defaults[page.layout].widgets -%}
-    {%- elsif layout.widgets -%}
-        {%- assign widgets = layout.widgets -%}
-    {%- endif -%}
-
-    {%- for widget in widgets -%}
-        {%- assign file = widget -%}
-        {%- assign array = file | split: '.' -%}
-        {%- if array.size == 1 -%}
-          {%- assign file = file | append: '.html' -%}
-        {%- endif -%}
-
-        {%- assign file = 'widgets/' | append: file -%}
-
-        {%- include {{ file }} %}
-
-    {%- endfor -%}
+    {% include bottomNav.html %}
 </div>
 
-{% include bottomNav.html %}

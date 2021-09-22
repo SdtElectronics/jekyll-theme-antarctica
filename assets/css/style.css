@@ -806,14 +806,10 @@ table th, table td {
 }
 
 #rightCont{
-    display: flex;
-    flex-direction: column;
     --body-right-margin: 4.8rem;
     right: calc(var(--sidebar-elem-size) * 1rem + var(--body-right-margin));
     height: calc(100vh - var(--body-inner-margin) * 2 + var(--tile-inter-margin));
     width: calc(var(--sidebar-full-size) * 1rem + var(--right-total-space) - var(--body-right-margin));
-    perspective: 500px;
-    perspective-origin: left;
 }
 
 .rightMulCol{
@@ -877,21 +873,22 @@ table th, table td {
 }
 
 #bottomNav{
-    display: none;
-    position: fixed;
-    left: calc(var(--body-inner-margin) + 1px);
-    bottom: var(--body-inner-margin);
-    width: calc(100vw - var(--body-inner-margin) * 2 - 2px);
-    height: calc(var(--sidebar-elem-size) * 1rem);
-    overflow: visible;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .bottomGrp{
     position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color: var(--tile-bkgr-color);
     font-size: 0;
+}
+
+div.bottomPop{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .bottomGrp::before{
@@ -914,27 +911,6 @@ table th, table td {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
-}
-
-.bottomPop{
-    --bottom-margin: calc(var(--tile-inter-margin) + var(--body-inner-margin) + var(--sidebar-elem-size) * 1rem);
-    position: fixed;
-    display: none;
-    bottom: var(--bottom-margin);
-    left: var(--body-inner-margin);
-    width: calc(100vw - var(--body-inner-margin) * 2);
-    max-height: calc(100vh - var(--bottom-margin) * 2 - var(--body-inner-margin));
-    overflow-y: auto;
-    z-index: 2;
-}
-
-div.bottomPop{
-    max-height: calc(100vh - var(--bottom-margin) * 2 - var(--body-inner-margin));
-    padding-top: var(--bottom-margin);
-}
-
-ul.bottomPop{
-    background-color: var(--tile-bkgr-color);
 }
 
 .bottomPopbtn{
@@ -969,15 +945,6 @@ ul.bottomPop{
     cursor: pointer;
 }
 
-.bottomPopbtn:checked+.bottomRstbtn{
-    display: inline-block;
-    opacity: 0;
-}
-
-.bottomPopbtn:checked~.bottomPopBack,.bottomPopbtn:checked+.bottomRstbtn+.bottomPop{
-    display: block;
-}
-
 #bottomListBtn::after{
     content: "\f778";
 }
@@ -996,9 +963,11 @@ ul.bottomPop{
     padding-left: 0.3rem;
 }
 
+
+
 @media screen and (max-width: 81rem){
     #rightCont{
-        display: none !important;
+        display: none;
     }
 
     .mid-content{
@@ -1092,6 +1061,26 @@ ul.bottomPop{
     }
 }
 
+@media screen and (min-width: 650px){
+    #bottomNav>div{
+        display: none;
+    }
+    
+    #bottomNav>form>:not(div.bottomPop){
+        display: none;
+    }
+
+    #rightCont{
+        perspective: 500px;
+        perspective-origin: left;
+    }
+
+    .bottomGrp{
+        overflow: visible;
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 650px){  
     :root{
         --tile-inter-margin: 0.6rem;
@@ -1100,6 +1089,15 @@ ul.bottomPop{
 
     ::-webkit-scrollbar{
         width: 6px;
+    }
+
+    #bottomNav{
+        position: fixed;
+        left: calc(var(--body-inner-margin) + 1px);
+        bottom: var(--body-inner-margin);
+        width: calc(100vw - var(--body-inner-margin) * 2 - 2px);
+        height: calc(var(--sidebar-elem-size) * 1rem);
+        overflow: visible;
     }
 
     .sidebarCont{
@@ -1129,6 +1127,10 @@ ul.bottomPop{
         max-width: 100%;
     }
 
+    #rightCont{
+        display: block;
+    }
+
     .rightElem{
         animation: none;
     }
@@ -1136,5 +1138,40 @@ ul.bottomPop{
     #bottomNav{
         display: flex;
         justify-content: space-between;
+    }
+
+    .bottomPop{
+        --bottom-margin: calc(var(--tile-inter-margin) + var(--body-inner-margin) + var(--sidebar-elem-size) * 1rem);
+        position: fixed;
+        display: none;
+        bottom: var(--bottom-margin);
+        left: var(--body-inner-margin);
+        width: calc(100vw - var(--body-inner-margin) * 2);
+        max-height: calc(100vh - var(--bottom-margin) * 2 - var(--body-inner-margin));
+        overflow-y: auto;
+        z-index: 2;
+    }
+    
+    div.bottomPop{
+        max-height: calc(100vh - var(--bottom-margin) * 2 - var(--body-inner-margin));
+        padding-top: var(--bottom-margin);
+        display: none;
+    }
+    
+    ul.bottomPop{
+        background-color: var(--tile-bkgr-color);
+    }
+
+    .bottomPopbtn:checked+.bottomRstbtn{
+        display: inline-block;
+        opacity: 0;
+    }
+    
+    .bottomPopbtn:checked~.bottomPopBack,.bottomPopbtn:checked+.bottomRstbtn+.bottomPop{
+        display: block;
+    }
+
+    .bottomGrp{
+        background-color: var(--tile-bkgr-color);
     }
 }

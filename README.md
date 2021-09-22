@@ -1,6 +1,6 @@
 # Antarctica Theme
 
-![48U4iQ.png](https://z3.ax1x.com/2021/09/19/48U4iQ.png)
+![4U6cuV.png](https://z3.ax1x.com/2021/09/22/4U6cuV.png)
 
 
 The goal of Antarctica is evolving to an elegant and feature-rich theme across platforms.

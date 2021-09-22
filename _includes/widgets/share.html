@@ -1,5 +1,5 @@
 {%- if site.template.widgets contains "share" -%}
-<div class = "rightElem rightBtns shadowTile">
+<div class = "rightElem rightBtns shadowTile wxshare">
     
     {% include functions/get_share.html %}
 
@@ -18,10 +18,18 @@
 
     {% assign wbShareLink = "http://service.weibo.com/share/share.php?type=3&count=1&url=" | append: surl | append: "&title=" | append: stitle | uri_escape %}
 
-    <a class = "btn nf nf-fa-weibo" target = "_blank" >
+    <a class = "btn nf nf-fa-weibo" target = "_blank" href = "{{ wbShareLink }}">
     </a>
 
     <a class = "btn nf nf-fa-weixin" target = "_blank" href = "{{ qqShareLink }}">
     </a>
 </div>
+
+<style>
+    @media screen and (max-width: 650px){
+        .wxshare{
+            display: none;
+        }
+    }
+</style>
 {%- endif -%}
