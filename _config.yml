@@ -62,6 +62,7 @@ template:
 valine:
   appId: "GoHOdR14a6Qubobq68emQ8n2-MdYXbMMI"
   appKey: "SCxcdTzApt8RXJVrtqsDXay0"
+  serverURLs: https://gohodr14.api.lncldglobal.com
 
 exclude: 
   - ./.reff/

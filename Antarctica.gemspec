@@ -4,10 +4,10 @@ Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-antarctica"
   spec.version       = "0.1.0"
   spec.authors       = ["SdtElectronics"]
-  spec.email         = ["meiyang423@Gmail.com"]
+  spec.email         = ["null@std.uestc.edu.cn"]
 
   spec.summary       = "Antarctica theme for jekyll"
-  spec.homepage      = "https://github.com/SdtElectronics/Jekyll-Antarctic"
+  spec.homepage      = "https://github.com/SdtElectronics/jekyll-theme-antarctica"
   spec.license       = "GPL"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }

@@ -7,7 +7,8 @@
             el: '#vcomments',
             appId: '{{ site.valine.appId }}',
             appKey: '{{ site.valine.appKey }}',
-            lang: 'en'
+            lang: 'en',
+            serverURLs: '{{ site.valine.serverURLs }}'
         });
 
         document.getElementById("veditor").setAttribute("rows", "1");
