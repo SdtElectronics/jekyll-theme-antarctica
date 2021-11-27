@@ -8,7 +8,8 @@
             appId: '{{ site.valine.appId }}',
             appKey: '{{ site.valine.appKey }}',
             lang: 'en',
-            path: "home"
+            path: "home",
+            serverURLs: '{{ site.valine.serverURLs }}'
         });
         
         document.getElementById("veditor").setAttribute("rows", "1");

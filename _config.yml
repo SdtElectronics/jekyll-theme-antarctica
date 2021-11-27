@@ -60,8 +60,10 @@ template:
 
 # Valine Comments
 valine:
-  appId: ""
-  appKey: ""
+  appId: "GoHOdR14a6Qubobq68emQ8n2-MdYXbMMI"
+  appKey: "SCxcdTzApt8RXJVrtqsDXay0"
+  serverURLs: ""
+
 
 exclude: 
   - ./.reff/
