@@ -8,8 +8,7 @@ widgets:
 
 <div id = "midComp" class = "midMulRow mid-content noScrollbar fixedCont">
     <div id = "midContTop"></div>
-    {%- assign post = site.posts | concat: site.projects | sort: 'date' | reverse -%}
-    {%- assign posts = site.posts | concat: site.projects -%}
+    {%- assign posts = site.posts | concat: site.projects | sort: 'date' | reverse -%}
     {%- for item in posts -%}
         {% if item != nil %}
             {% include postPrev.html %}
