@@ -20,7 +20,7 @@ The goal of Antarctica is evolving to an elegant and feature-rich theme across p
 There are three ways to install:
 * If you are hosting the site by yourself, you may prefer to [install as a gem-based theme](https://jekyllrb.com/docs/themes/#installing-a-theme)
 * If you are hosting the site on Github pages, you can [install as a remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/)
-* You can also fork the master branch of this repository
+* You can also fork the release branch of this repository
 
 ## Customization
 Customizable options are under [_config.yml](_config.yml). Coments inside will help you to edit them.
@@ -33,6 +33,6 @@ Customizable options are under [_config.yml](_config.yml). Coments inside will h
 | Bottom nav popup expansion  | 0.2              |
 | Comment widget improvement  | 0.2              |
 | Related sites widget        | 0.2              |
-| Related sites widget        | 0.2              |
+| Abstract/excerpt in preview | 0.2              |
 | Arcylic color scheme        | 0.3              |
 

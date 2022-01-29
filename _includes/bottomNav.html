@@ -65,7 +65,7 @@
 
         <input type="reset" class = "bottomRstbtn"/>
 
-        <div class = "bottomPop noScrollbar">
+        <div id = "widgetsCont" class = "bottomPop noScrollbar">
             {%- if page.widgets -%}
                 {%- assign widgets = page.widgets -%}
             {%- elsif site.defaults[page.layout].widgets -%}

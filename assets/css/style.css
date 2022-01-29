@@ -814,8 +814,13 @@ table th, table td {
 #rightCont{
     --body-right-margin: 4.8rem;
     right: calc(var(--sidebar-elem-size) * 1rem + var(--body-right-margin));
-    height: calc(100vh - var(--body-inner-margin) * 2 + var(--tile-inter-margin));
+    height: calc(100vh - var(--body-inner-margin) * 2);
     width: calc(var(--sidebar-full-size) * 1rem + var(--right-total-space) - var(--body-right-margin));
+}
+
+#widgetsCont{
+    overflow-y: scroll;
+    scroll-snap-type: y;
 }
 
 .rightMulCol{
@@ -826,11 +831,15 @@ table th, table td {
 }
 
 .rightElem{
-    overflow: hidden;
-    margin: 0px 0px var(--tile-inter-margin) 0px;
+    margin: var(--tile-inter-margin) 0px 0px 0px;
     width: 100%;
-    min-height: calc(var(--sidebar-elem-size) * 1rem);
+    scroll-snap-align: start;
     animation: var(--transition-speed) ease-out 0s 1 spinRhs;
+    background-color: var(--tile-bkgr-color);
+}
+
+.rightElem:first-child{
+    margin: 0px;
 }
 
 .rightElem>hr{
@@ -895,6 +904,7 @@ div.bottomPop{
     display: flex;
     flex-direction: column;
     height: 100%;
+    filter: drop-shadow(0px 0px 3px #777);
 }
 
 .bottomGrp::before{
