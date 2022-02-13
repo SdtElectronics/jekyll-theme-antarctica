@@ -820,6 +820,9 @@ table th, table td {
 
 #widgetsCont{
     overflow-y: scroll;
+}
+
+#widgetsCont:hover{
     scroll-snap-type: y;
 }
 

@@ -52,7 +52,7 @@ template:
 # date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%b %d, %Y"
-  widgets: colophon comment global_cmt post_meta share
+  widgets: colophon comment global_cmt post_meta share related_sites
   portfolios: projects gallery
 
 # If you want to generate website sitemap, you can set true
@@ -78,6 +78,11 @@ collections:
 projects_categories: 
   - Hardware
   - Software
+
+related_sites:
+  Jekyll|Simple, blog-aware, static sites: https://jekyllrb.com
+  Source Repo | Theme antarctica: https://github.com/SdtElectronics/jekyll-theme-antarctica
+  My Homepage | SdtElectronics: https://github.com/SdtElectronics
 
 defaults:
   - scope:

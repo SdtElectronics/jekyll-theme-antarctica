@@ -27,12 +27,11 @@ Customizable options are under [_config.yml](_config.yml). Coments inside will h
 
 ## Roadmap
 
-| Feature                     | Planned Version  |
-| :-------------------------- | :--------------: |
-| Scrollable widget bar       | 0.2              |
-| Bottom nav popup expansion  | 0.2              |
-| Comment widget improvement  | 0.2              |
-| Related sites widget        | 0.2              |
-| Abstract/excerpt in preview | 0.2              |
-| Arcylic color scheme        | 0.3              |
-
+| Feature                     | Planned Version  | Status |
+| :-------------------------- | :--------------: | :----: |
+| Scrollable widget bar       | 0.2              | √      |
+| Bottom nav popup expansion  | 0.2              |        |
+| Comment widget improvement  | 0.2              | √      |
+| Related sites widget        | 0.2              | √      |
+| Abstract/excerpt in preview | 0.2              |        |
+| Arcylic color scheme        | 0.3              |        |
