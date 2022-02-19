@@ -1,7 +1,7 @@
 ---
 layout: article
 categories: junk
-eyeCatcher: https://im0-tub-ru.yandex.net/i?id=1c1ca76bbdad38922febe63f121968f3-l&ref=rim&n=13&w=1026&h=1271
+eyeCatcher: https://i.pinimg.com/originals/eb/0c/be/eb0cbe6d176fdba2af7cd5ea4e97386b.jpg
 ---
 
 Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
