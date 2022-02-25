@@ -44,3 +44,7 @@ Customizable options are under [_config.yml](_config.yml). Coments inside will h
 | Abstract/excerpt in preview | 0.2              |        |
 | Arcylic color scheme        | 0.3              |        |
 
+## License
+This project is available under [GPLv3](LICENSE) License.
+
+If you find this project useful, please star this repository. Thanks.

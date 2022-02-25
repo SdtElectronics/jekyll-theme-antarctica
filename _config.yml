@@ -62,10 +62,6 @@ valine:
   appKey: "SCxcdTzApt8RXJVrtqsDXay0"
   serverURLs: https://gohodr14.api.lncldglobal.com
 
-exclude: 
-  - ./.reff/
-  - ./.reff/_posts/
-
 collections_dir: collections
 collections:
   projects:
@@ -80,7 +76,7 @@ projects_categories:
 related_sites:
   Jekyll | Static site generator: https://jekyllrb.com
   Source Repo | Theme antarctica: https://github.com/SdtElectronics/jekyll-theme-antarctica
-  My Homepage | SdtElectronics: https://github.com/SdtElectronics
+  My Homepage | SdtElectronics: https://sdtelectronics.github.io/
 
 defaults:
   - scope:

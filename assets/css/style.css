@@ -822,10 +822,6 @@ table th, table td {
     overflow-y: scroll;
 }
 
-#widgetsCont:hover{
-    scroll-snap-type: y;
-}
-
 .rightMulCol{
     display: flex;
     justify-content: space-between;
@@ -835,6 +831,7 @@ table th, table td {
 
 .rightElem{
     margin: var(--tile-inter-margin) 0px 0px 0px;
+    padding-bottom: 0.3rem;
     width: 100%;
     scroll-snap-align: start;
     animation: var(--transition-speed) ease-out 0s 1 spinRhs;
@@ -871,6 +868,7 @@ table th, table td {
 .rightBtns{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 0rem;
 }
 
 .rightElem>.tagCont{
@@ -1098,6 +1096,10 @@ div.bottomPop{
         overflow: visible;
         height: 100%;
     }
+
+    #widgetsCont:hover{
+        scroll-snap-type: y;
+    }
 }
 
 @media screen and (max-width: 650px){  
@@ -1188,6 +1190,10 @@ div.bottomPop{
     
     .bottomPopbtn:checked~.bottomPopBack,.bottomPopbtn:checked+.bottomRstbtn+.bottomPop{
         display: block;
+    }
+
+    .bottomPopbtn:checked+.bottomRstbtn+#widgetsCont.bottomPop{
+        display: flex;
     }
 
     .bottomGrp{

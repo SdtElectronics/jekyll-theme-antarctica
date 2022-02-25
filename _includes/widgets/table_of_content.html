@@ -3,8 +3,6 @@
 {%- if _workspace.size > 0 and site.template.widgets contains "table_of_content" -%}
 
 <div class = "rightElem">
-    {{ _workspace | inspect }}
-    {{ header | inspect }}
     <h1 class = "lstH1">Table of Content</h1>
 
     {% include widgets/toc.html html=content id="toc" h_min=2 item_class="toc_t" %}

@@ -1,10 +1,7 @@
 # Antarctica Theme
-
 ![4U6cuV.png](https://z3.ax1x.com/2021/09/22/4U6cuV.png)
 
-
 The goal of Antarctica is evolving to an elegant and feature-rich theme across platforms.
-
 
 [Live demo](https://sdtelectronics.github.io/jekyll-theme-antarctica/)
 
@@ -26,13 +23,16 @@ There are three ways to install:
 Customizable options are under [_config.yml](_config.yml). Coments inside will help you to edit them.
 
 ## Roadmap
-
 | Feature                     | Planned Version  | Status |
 | :-------------------------- | :--------------: | :----: |
 | Scrollable widget bar       | 0.2              | √      |
-| Bottom nav popup expansion  | 0.2              |        |
 | Comment widget improvement  | 0.2              | √      |
 | Related sites widget        | 0.2              | √      |
 | Table of contents widget    | 0.2              | √      |
 | Abstract/excerpt in preview | 0.2              |        |
 | Arcylic color scheme        | 0.3              |        |
+
+## License
+This project is available under [GPLv3](LICENSE) License.
+
+If you find this project useful, please star this repository. Thanks.
