@@ -52,6 +52,8 @@ template:
   date_format: "%b %d, %Y"
   widgets: colophon comment global_cmt post_meta share related_sites table_of_content
   portfolios: projects gallery
+  propIcons:
+    pinned: "&#x1f4cc;&#xFE0E;"
 
 # If you want to generate website sitemap, you can set true
 # sitemap: false

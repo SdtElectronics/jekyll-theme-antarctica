@@ -29,6 +29,7 @@ Customizable options are under [_config.yml](_config.yml). Coments inside will h
 | Comment widget improvement  | 0.2              | √      |
 | Related sites widget        | 0.2              | √      |
 | Table of contents widget    | 0.2              | √      |
+| Pinned post                 | 0.2              | √      |
 | Abstract/excerpt in preview | 0.2              |        |
 | Arcylic color scheme        | 0.3              |        |
 

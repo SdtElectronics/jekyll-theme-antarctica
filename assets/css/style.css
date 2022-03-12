@@ -437,7 +437,7 @@ pre > code {
 }
 
 pre.highlight, figure{
-    margin: 0.9rem;
+    margin: 0.9rem 0.5rem;;
 }
 
 blockquote {
@@ -722,6 +722,14 @@ table th, table td {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    pointer-events: none;
+}
+
+.mulRowProp{
+    position: absolute;
+    top: 0.21rem;
+    right: 0.3rem;
+    font-size: 1.3rem;
     pointer-events: none;
 }
 

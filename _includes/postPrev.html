@@ -8,6 +8,13 @@
 
 <div class = "mulRowElem">
     <a class = "mulRowPrev" href="{{ post.url | relative_url }}" style = "background-image: url({{ post.eyeCatcher }});"></a>
+    {%- if post.properties -%}
+        <span class = "mulRowProp">
+            {%- for prop in post.properties -%}
+                {{ site.template.propIcons[prop] }}
+            {%- endfor -%}
+        </span>
+    {%- endif -%}
     <h1>{{ post.title | escape }}</h1>
     <div class = "mulRowMeta">
         <span class = "mulRowDate">{{ post.date | date: date_format }}</span>
