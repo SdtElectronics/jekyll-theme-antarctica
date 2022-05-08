@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Theme Antarctica
+abstract: Highlights and instructions for users of this theme
 categories: misc
 tags: antarctica theme
 eyeCatcher: https://refstatic.sk/article/od-antarktidy-sa-odtrhol-jeden-z-najvacsich-zaznamenanych-ladovcov-v-historii~25d92685f6b3b93aefe6.jpg?is=1440x513c&ic=0x439x1579x562&c=2w&s=e0efd5864ab1b7e41b8c7f5e0912f84b404ca30a53df8461106b377c19a24a21
@@ -13,7 +14,7 @@ The goal of Antarctica is evolving to an elegant and feature-rich theme across p
 
 [Live demo](https://sdtelectronics.github.io/jekyll-theme-antarctica/)
 
-## Features
+## Highlights
 * Fully responsive layout achieves best visual on different screens
 * Flexible widgets provide extensible functionality
 * Integrated [NerdFonts](www.nerdfonts.com) with 3000+ icons

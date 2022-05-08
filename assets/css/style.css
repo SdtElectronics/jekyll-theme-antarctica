@@ -9,6 +9,9 @@
     --sidebar-full-size: 13;
     --right-total-space: 9rem;
 
+    --tile-fprev-height: 16rem;
+    --tile-lprev-height: 11rem;
+
     --tile-inter-margin: 0.9rem;
     --body-inner-margin: 1.3rem;
 
@@ -286,7 +289,7 @@ ul{
     width: calc(var(--sidebar-elem-size) * 1rem);
     overflow: hidden;
     left: 0px;
-    animation: var(--transition-speed) ease-out 0s 1 spinLhs;
+    /*animation: var(--transition-speed) ease-out 0s 1 spinLhs;*/
 }
 
 #upperSidebar>.sidebarGrp{
@@ -356,7 +359,7 @@ ul{
     height: calc(100vh - var(--body-inner-margin) * 2);
     min-width: 30vw;
     width: calc(100vw - var(--sidebar-hori-span) * 2rem - var(--right-total-space) - 2 * var(--tile-inter-margin));
-    animation: var(--transition-speed) ease-out 0s 1 toFront;
+    /*animation: var(--transition-speed) ease-out 0s 1 toFront;*/
     scroll-behavior: smooth;
     filter: drop-shadow(0px 0px 3px #777);
     overflow-y: auto;
@@ -572,7 +575,7 @@ table th, table td {
 }
 
 #midContTop+.mulRowElem>.mulRowPrev{
-    height: 16rem;
+    height: var(--tile-fprev-height);
 }
 
 #midContTop+.mulRowElem>h1{
@@ -651,11 +654,47 @@ table th, table td {
 .mulRowPrev{
     position: relative;
     display: block;
-    height: 11rem;
+    height: var(--tile-lprev-height);
     background-size: cover;
     background-position: center;
     cursor: pointer;
     box-shadow: inset 0 -4.5rem 6.3rem -3rem rgb(52, 67, 81);
+}
+
+.mulRowPrev:hover>.mulRowExpt{
+    display: -webkit-box;
+}
+
+.mulRowExpt{
+    overflow: hidden;
+    margin: 0px;
+    position: absolute;
+    white-space: normal;
+    word-break: break-all;
+    height: 100%;
+    width: 100%;
+    --padding: 0.72rem;
+    padding: var(--padding);
+    box-sizing: border-box;
+    color: #eee;
+    background-color: rgba(0,0,0,0.45);
+    display: none;
+    --line-height: 1.35rem;
+    line-height: var(--line-height);
+    --lines: 5;
+    --cont-height: calc(var(--lines) * var(--line-height) + var(--padding));
+    border-bottom: solid calc(var(--tile-lprev-height) - var(--cont-height)) rgba(0, 0, 0, 0);
+    -webkit-line-clamp: var(--lines);
+    -webkit-box-orient: vertical;
+}
+
+#midContTop+.mulRowElem>.mulRowPrev>.mulRowExpt{
+    font-size: 1.2rem;
+    --padding: 0.72rem;
+    --line-height: 1.53rem;
+    --lines: 5;
+    --cont-height: calc(var(--lines) * var(--line-height) + var(--padding));
+    border-bottom: solid calc(var(--tile-fprev-height) - var(--cont-height)) rgba(0, 0, 0, 0);
 }
 
 .mulRowElem::before, html::before{
@@ -705,10 +744,6 @@ table th, table td {
 
 .mulRowElem:nth-child(6n+5)::before{
     filter: hue-rotate(160deg);
-}
-
-.mulRowPrev:hover{
-    box-shadow: inset 0 -4.5rem 6.3rem -3rem rgb(89, 107, 120);
 }
 
 .mulRowElem>h1{
@@ -842,7 +877,7 @@ table th, table td {
     padding-bottom: 0.3rem;
     width: 100%;
     scroll-snap-align: start;
-    animation: var(--transition-speed) ease-out 0s 1 spinRhs;
+    /*animation: var(--transition-speed) ease-out 0s 1 spinRhs;*/
     background-color: var(--tile-bkgr-color);
 }
 

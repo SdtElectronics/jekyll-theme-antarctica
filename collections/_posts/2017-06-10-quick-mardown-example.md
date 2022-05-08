@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Quick Markdown Example
+abstract: Show more advanced features including code blocks and tables in Markdown
 categories: markdown
 tags: example
 eyeCatcher: https://im0-tub-ru.yandex.net/i?id=7f2cbd15e00d025f9967cf5e98b06bab-l&ref=rim&n=13&w=1080&h=1350

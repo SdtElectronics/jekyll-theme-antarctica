@@ -1,6 +1,7 @@
 ---
 layout: article
 title: "Post Content Styles Demonstration"
+abstract: Demonstration of some formats for a post
 categories: demo
 eyeCatcher: https://pbs.twimg.com/media/EyhcJUoWgAMAjvj.jpg
 ---

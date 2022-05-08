@@ -1,6 +1,7 @@
 ---
 layout: article
 title: An Exhibit of Markdown
+abstract: Show the usage of lists, quotes, images and other functions in Markdown
 categories: markdown
 tags: example markdown
 eyeCatcher: https://w-dog.ru/wallpapers/15/12/517922191063240/led-arktika-toross-zima.jpg
