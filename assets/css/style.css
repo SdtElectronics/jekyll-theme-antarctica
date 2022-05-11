@@ -659,8 +659,6 @@ table th, table td {
     background-position: center;
     cursor: pointer;
     box-shadow: inset 0 -4.5rem 6.3rem -3rem rgb(52, 67, 81);
-<<<<<<< HEAD
-=======
 }
 
 .mulRowPrev:hover>.mulRowExpt{
@@ -697,7 +695,6 @@ table th, table td {
     --lines: 5;
     --cont-height: calc(var(--lines) * var(--line-height) + var(--padding));
     border-bottom: solid calc(var(--tile-fprev-height) - var(--cont-height)) rgba(0, 0, 0, 0);
->>>>>>> dev
 }
 
 .mulRowElem::before, html::before{
@@ -749,13 +746,6 @@ table th, table td {
     filter: hue-rotate(160deg);
 }
 
-<<<<<<< HEAD
-.mulRowPrev:hover{
-    box-shadow: inset 0 -4.5rem 6.3rem -3rem rgb(89, 107, 120);
-}
-
-=======
->>>>>>> dev
 .mulRowElem>h1{
     position: relative;
     z-index: 1;
