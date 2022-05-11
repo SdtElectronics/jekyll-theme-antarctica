@@ -2,6 +2,7 @@
 layout: scaffold
 widgets:
   - colophon
+  - related_sites
   - share
   - global_cmt
 ---
@@ -10,8 +11,16 @@ widgets:
     <div id = "midContTop"></div>
     {%- assign posts = site.posts | concat: site.projects | sort: 'date' | reverse -%}
     {%- for item in posts -%}
-        {% if item != nil %}
+        {% if item != nil and item.properties contains "pinned" %}
             {% include postPrev.html %}
         {% endif %}
     {%- endfor -%}
+
+    {%- for item in posts -%}
+        {% unless item == nil or item.properties contains "pinned" %}
+            {% include postPrev.html %}
+        {% endunless  %}
+    {%- endfor -%}
 </div>
+
+{{ content }}

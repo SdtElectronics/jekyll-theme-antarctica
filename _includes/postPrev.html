@@ -4,10 +4,29 @@
 
 {%- assign post = item -%}
 
+{%- if post.abstract -%}
+  {% assign excerpt = post.abstract %}
+{% else %}
+  {% assign article = post.content %}
+  {%- include functions/get_article_excerpt.html -%}
+  {% assign excerpt = return %}
+{%- endif -%}
+
 {% assign date_format = site.template.date_format | default: "%b %-d, %Y" %}
 
 <div class = "mulRowElem">
-    <a class = "mulRowPrev" href="{{ post.url | relative_url }}" style = "background-image: url({{ post.eyeCatcher }});"></a>
+    <a class = "mulRowPrev" href="{{ post.url | relative_url }}" style = "background-image: url({{ post.eyeCatcher }});">
+        <p class = "mulRowExpt">
+            {{ excerpt }}
+        </p>
+    </a>
+    {%- if post.properties -%}
+        <span class = "mulRowProp">
+            {%- for prop in post.properties -%}
+                {{ site.template.propIcons[prop] }}
+            {%- endfor -%}
+        </span>
+    {%- endif -%}
     <h1>{{ post.title | escape }}</h1>
     <div class = "mulRowMeta">
         <span class = "mulRowDate">{{ post.date | date: date_format }}</span>

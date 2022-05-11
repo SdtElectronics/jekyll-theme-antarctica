@@ -1,4 +1,13 @@
-# Antarctica Theme
+---
+layout: article
+title: Theme Antarctica
+abstract: An overview of this theme, including highlights and instructions of use
+categories: misc
+tags: antarctica theme
+eyeCatcher: https://refstatic.sk/article/od-antarktidy-sa-odtrhol-jeden-z-najvacsich-zaznamenanych-ladovcov-v-historii~25d92685f6b3b93aefe6.jpg?is=1440x513c&ic=0x439x1579x562&c=2w&s=e0efd5864ab1b7e41b8c7f5e0912f84b404ca30a53df8461106b377c19a24a21
+---
+
+---
 ![4U6cuV.png](https://z3.ax1x.com/2021/09/22/4U6cuV.png)
 
 The goal of Antarctica is evolving to an elegant and feature-rich theme across platforms.
@@ -23,6 +32,7 @@ There are three ways to install:
 Customizable options are under [_config.yml](_config.yml). Coments inside will help you to edit them.
 
 ## Roadmap
+
 | Feature                     | Planned Version  | Status |
 | :-------------------------- | :--------------: | :----: |
 | Scrollable widget bar       | 0.2              | √      |
@@ -30,7 +40,7 @@ Customizable options are under [_config.yml](_config.yml). Coments inside will h
 | Related sites widget        | 0.2              | √      |
 | Table of contents widget    | 0.2              | √      |
 | Pinned post                 | 0.2              | √      |
-| Abstract/excerpt in preview | 0.2              | √      |
+| Abstract/excerpt in preview | 0.2              |        |
 | Arcylic color scheme        | 0.3              |        |
 
 ## License

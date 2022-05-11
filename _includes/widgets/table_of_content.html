@@ -1,0 +1,28 @@
+{% assign nodes = content | strip | split: '<h' %}
+{% assign _workspace = nodes[2] | split: '</h' %}
+{%- if _workspace.size > 0 and site.template.widgets contains "table_of_content" -%}
+
+<div class = "rightElem">
+    <h1 class = "lstH1">Table of Content</h1>
+
+    {% include widgets/toc.html html=content id="toc" h_min=2 item_class="toc_t" %}
+</div>
+
+<style>
+
+#toc{
+    margin: 0.5rem 1.1rem 0rem 1.1rem;
+}
+
+#toc ul{
+    margin-left: -0.3rem;
+}
+
+.toc_t{
+    list-style-type: disc;
+    margin: 0.5rem 0rem 0.4rem 1.2rem;
+    font-size: 1rem;
+}
+
+</style>
+{%- endif -%}

@@ -1,0 +1,17 @@
+{%- if site.template.widgets contains "related_sites" -%}
+<div class = "rightElem">
+    <h1 class = "lstH1">Related Sites</h1>
+
+    {%- for rel in site.related_sites -%}
+    <div class = "rightRow">
+        <a class = "relnks" href = "{{ rel[1] }}">{{ rel[0] }}</a>
+    </div>
+    {%- endfor -%}
+</div>
+
+<style>
+.relnks{
+    color: #424242 !important;
+}
+</style>
+{%- endif -%}
