@@ -2,10 +2,14 @@
 layout: article
 title: Xassette IoT
 categories: Hardware
-tags: linux 
+tags: linux evb mips
 eyeCatcher: https://z3.ax1x.com/2021/08/26/huiE1f.jpg
+abstract: A single-board computer based on Mediatek MT76x8 Wi-Fi SoC
 ---
 
+Versatile card computer based on MT76x8
+
+[Github repository](https://github.com/SdtElectronics/Xassette-IoT)
 ## Hardware Resources
 * SoC: MediaTek MT7628 1xMIPS 24Kc@580Mhz
 * RAM: 64MB DDR2
@@ -24,23 +28,16 @@ Note:
 ## Schematic
 ![sch](https://github.com/SdtElectronics/Xassette-IoT/raw/master/hw/schematic.png)
 
+Note: `IOxx` in the schematic as well as the silk numbers onboard correspond to the GPIO indices in the table below.
+
+
+![pinmux](https://github.com/SdtElectronics/Xassette-IoT/raw/master/img/pinmux.png)
 
 PDF format is available at [hw/anBreakout.pdf](https://github.com/SdtElectronics/Xassette-IoT/raw/master/hw/anBreakout.pdf)
 
 ## Board Gerber
 See [Releases](https://github.com/SdtElectronics/Xassette-IoT/releases/)
 
-## Schematic & PCB Layout Source
-![peach](https://z3.ax1x.com/2021/08/15/fg78RH.jpg)
-
-
-Please contact me if you want hardware design sources (in Ki-CAD format).
-
-
-Note: `IOxx` in the schematic as well as the silk numbers onboard correspond to the GPIO indices in the table below.
-
-
-![pinmux](https://github.com/SdtElectronics/Xassette-IoT/raw/master/img/pinmux.png)
 
 ## Flashing New Firmware
 See [Guide on Firmware](docs/fwGuide.md)
