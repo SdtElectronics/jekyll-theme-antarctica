@@ -23,15 +23,16 @@ There are three ways to install:
 Customizable options are under [_config.yml](_config.yml). Coments inside will help you to edit them.
 
 ## Roadmap
-| Feature                     | Planned Version  | Status |
-| :-------------------------- | :--------------: | :----: |
-| Scrollable widget bar       | 0.2              | √      |
-| Comment widget improvement  | 0.2              | √      |
-| Related sites widget        | 0.2              | √      |
-| Table of contents widget    | 0.2              | √      |
-| Pinned post                 | 0.2              | √      |
-| Abstract/excerpt in preview | 0.2              | √      |
-| Arcylic color scheme        | 0.3              |        |
+| Feature                       | Planned Version  | Status |
+| :---------------------------- | :--------------: | :----: |
+| Scrollable widget bar         | 0.2              | √      |
+| Comment widget improvement    | 0.2              | √      |
+| Related sites widget          | 0.2              | √      |
+| Table of contents widget      | 0.2              | √      |
+| Pinned post                   | 0.2              | √      |
+| Abstract/excerpt in preview   | 0.2              | √      |
+| Optimize view on large screen | 0.3              |        |
+| Arcylic color scheme          | 0.3              |        |
 
 ## License
 This project is available under [GPLv3](LICENSE) License.
