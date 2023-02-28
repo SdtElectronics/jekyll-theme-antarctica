@@ -81,10 +81,17 @@ html{
     position: fixed;
     height: 100vh;
     width: 100vw;
+    text-align: center;
 }
 
 body{
+    text-align: start;
+    display: inline-block;
+    position: relative;
     margin: 0px;
+    width: 100vw;
+    height: 100%;
+    max-width: 110rem;
     font-family: source sans pro,Helvetica,Arial,sans-serif;
     color: var(--foreground-dark);
 }
@@ -128,7 +135,7 @@ ul{
 }
 
 .fixedCont{
-    position: fixed;
+    position: absolute;
     top: var(--body-inner-margin);
 }
 
@@ -244,7 +251,7 @@ ul{
 }
 
 .sidebarCont{
-    position: fixed;
+    position: absolute;
     overflow-x: visible;
     width: calc(var(--sidebar-elem-size) * 1rem);
     left: calc(var(--sidebar-full-size) * 1rem);
@@ -358,7 +365,7 @@ ul{
     left: calc(var(--sidebar-hori-span) * 1rem + var(--tile-inter-margin));
     height: calc(100vh - var(--body-inner-margin) * 2);
     min-width: 30vw;
-    width: calc(100vw - var(--sidebar-hori-span) * 2rem - var(--right-total-space) - 2 * var(--tile-inter-margin));
+    width: calc(100% - var(--sidebar-hori-span) * 2rem - var(--right-total-space) - 2 * var(--tile-inter-margin));
     /*animation: var(--transition-speed) ease-out 0s 1 toFront;*/
     scroll-behavior: smooth;
     filter: drop-shadow(0px 0px 3px #777);
@@ -631,7 +638,7 @@ table th, table td {
 }
 
 .midMulRow{
-    width: calc(100vw - var(--sidebar-hori-span) * 2rem - var(--right-total-space) - var(--tile-inter-margin));
+    width: calc(100% - var(--sidebar-hori-span) * 2rem - var(--right-total-space) - var(--tile-inter-margin));
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
@@ -967,7 +974,7 @@ div.bottomPop{
     top: 0px;
     left: 0px;
     display: none;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
