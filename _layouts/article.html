@@ -11,7 +11,9 @@ widgets:
 <img class = "eyeCatcher" src = "{{ page.eyeCatcher }}"/>
 {%- endif -%}
 
-<h1 class = "articleH1">{{ heading | default: page.title | escape }}</h1>
-<article class = "articleBody">
-    {% include anchor_headings.html html=content anchorBody="" %}
-</article>
+<div class = "articleOuter">
+    <h1 class = "articleH1">{{ heading | default: page.title | escape }}</h1>
+    <article class = "articleBody">
+        {% include anchor_headings.html html=content anchorBody="" %}
+    </article>
+</div>

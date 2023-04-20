@@ -91,7 +91,7 @@ body{
     margin: 0px;
     width: 100vw;
     height: 100%;
-    max-width: 110rem;
+    max-width: 112rem;
     font-family: source sans pro,Helvetica,Arial,sans-serif;
     color: var(--foreground-dark);
 }
@@ -379,17 +379,24 @@ ul{
     overflow-y: overlay;
 }
 
+.articleOuter{
+    width: 91.6%;
+    margin: 0 auto;
+    max-width: 57rem;
+}
+
 .articleH1{
     margin: 0px;
-    padding: 2.7rem 2rem 1.2rem 2.1rem;
+    padding: 2.7rem 0px 1.2rem 0px;
     font-size: 2.4rem;
     font-weight: 700;
     color: var(--foreground-emph);
 }
 
 .articleBody{
-    padding: 0rem 2.7rem 1.5rem 2.7rem;
+    padding: 0rem 1.8% 1.5rem 1.8%;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .articleBody h1, .articleBody h2, .articleBody h3, .articleBody h4, .articleBody h5, .articleBody h6{
@@ -397,8 +404,10 @@ ul{
     color: var(--foreground-emph);
 }
 
-.articleBody img{
+.articleBody img, .articleBody svg{
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .articleBody ul{
