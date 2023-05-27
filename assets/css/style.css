@@ -9,8 +9,12 @@
     --sidebar-full-size: 13;
     --right-total-space: 9rem;
 
-    --tile-fprev-height: 16rem;
-    --tile-lprev-height: 11rem;
+    --tile-first-height: 20rem;
+    --tile-rest-height: 13.2rem;
+    --tile-meta-height: 1.9rem;
+
+    --tile-first-mheight: max(18vw, 13.8rem);
+    --tile-rest-mheight: max(15vw, 11rem);
 
     --tile-inter-margin: 0.9rem;
     --body-inner-margin: 1.3rem;
@@ -587,11 +591,13 @@ table th, table td {
 
 #midComp>#midContTop+.mulRowElem{
     width: 100%;
-    height: 17.9rem;
+    height: var(--tile-first-height);
+    max-height: var(--tile-first-mheight);
 }
 
 #midContTop+.mulRowElem>.mulRowPrev{
-    height: var(--tile-fprev-height);
+    height: calc(var(--tile-first-height) - var(--tile-meta-height));
+    max-height: calc(var(--tile-first-mheight) - var(--tile-meta-height));
 }
 
 #midContTop+.mulRowElem>h1{
@@ -658,7 +664,8 @@ table th, table td {
 .mulRowElem{
     margin: var(--tile-inter-margin) var(--tile-inter-margin) 0px 0px;
     position: relative;
-    height: 12.9rem;
+    height: height: var(--tile-rest-height);
+    max-height: var(--tile-rest-mheight);
     max-width: calc(100% - var(--tile-inter-margin));
     min-width: 32%;
     flex-grow: 1;
@@ -670,7 +677,8 @@ table th, table td {
 .mulRowPrev{
     position: relative;
     display: block;
-    height: var(--tile-lprev-height);
+    height: calc(var(--tile-rest-height) - var(--tile-meta-height));
+    max-height: calc(var(--tile-rest-mheight) - var(--tile-meta-height));
     background-size: cover;
     background-position: center;
     cursor: pointer;
