@@ -31,7 +31,7 @@ Customizable options are under [_config.yml](_config.yml). Coments inside will h
 | Table of contents widget      | 0.2              | √      |
 | Pinned post                   | 0.2              | √      |
 | Abstract/excerpt in preview   | 0.2              | √      |
-| Optimize view on large screen | 0.3              |        |
+| Optimize view on large screen | 0.3              | √      |
 | Arcylic color scheme          | 0.3              |        |
 
 ## License
