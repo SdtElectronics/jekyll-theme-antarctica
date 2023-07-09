@@ -1,0 +1,18 @@
+{%- if page.abstract and site.template.widgets contains "abstract" -%}
+
+<div class = "rightElem">
+    <h1 class = "lstH1">Abstract</h1>
+
+    <div class = "rightRow">
+        <h2 class = "abst-txt">{{ page.abstract }}</h2>
+    </div>
+</div>
+
+<style>
+ .abst-txt {
+    line-height: 1.26rem;
+    text-align: justify;
+ }
+</style>
+
+{%- endif -%}
