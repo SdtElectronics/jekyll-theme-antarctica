@@ -22,6 +22,23 @@ There are three ways to install:
 ## Customization
 Customizable options are under [_config.yml](_config.yml). Coments inside will help you to edit them.
 
+## Widget System
+Widgets in Antarctica are cards docked at the right side of the page with customizable contents. To enable/disable a widget, edit the `widgets` field in the `template` section of the config.
+
+Widgets included in the current version:
+* colophon
+* comment
+* post metadata
+* share this page
+* related sites
+* table of content
+
+### Build A Widget
+Widgets are essentially self-contained HTML files including all the styles and scripts needed. To add a widget, create a HTML file under [./_includes/widgets/](./_includes/widgets/). You can take other files in this directory as a reference.
+
+### Register A Widget
+A page only loads widgets registered in it. This allows different sets of widgets to be load according to the page. To register a widget to a page, add the filename of the widget excluding the extension to the `widgets` field in the file under [./_layouts/](./_layouts/). To make the widget enabled, the name should also be added to the `widgets` field in the `template` section of the config.
+
 ## Roadmap
 | Feature                       | Planned Version  | Status |
 | :---------------------------- | :--------------: | :----: |
